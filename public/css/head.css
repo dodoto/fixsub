@@ -1,0 +1,213 @@
+			div#head{
+				padding-top:40px;
+				padding-bottom:20px;
+				float:left;
+				width:100%;
+				position:relative;
+				left:50%;
+				transform: translateX(-50%);
+				z-index:99999;
+				max-width:1200px;
+			}
+		    /**logo**/
+            div.logo{
+				float:left;
+				margin:3px 3.06% 0 0
+			}
+			div.logo img{
+				width:100px;
+			    max-width:100%;
+				height:auto;
+				vertical-align: bottom;
+			}
+			/**nav部分**/
+			div.navbody{
+				float:right;
+				margin:0 3.06% 0 0;
+				background:transparent;
+			}
+			div.nav{
+			    float:left;
+			}
+			div.nav ul.menu{
+				position:relative;
+			    margin-top:10px;
+				list-style: none;
+			}
+			div.nav>ul.menu>li{
+			    padding-bottom:10px;
+				position:relative;
+				float:left; 
+				vertical-align: baseline;
+			}
+			div.nav>ul.menu>li::after{
+				content:"";
+				position:absolute;
+				left:0;
+				bottom:0;
+				right:0;
+				margin:auto;
+				width:0;
+				height:2px;
+				transition:.3s all linear;
+			}
+			div.nav>ul.menu>li:hover:after{
+				width:70%;
+				background:#999;
+			}
+			ul.m-menu{
+				list-style: none;
+				position:absolute;
+				top:15px;
+				z-index: 20000;
+				margin-top:0;
+				padding-top:19px;
+				width:210px;
+				left:0px;
+				display:none;
+				opacity:1;
+			}
+			ul.m-menu>li, ul.s-menu>li{
+				padding-top:15px;
+				border-top:2px solid rgba(0,0,0,.2);
+				box-shadow:0 2px 2px rgba(0,0,0,.1);
+				position:relative;
+				float:left;
+				padding-bottom:4px;
+				width:100%;
+				background-color:#1e1e1e;
+			}
+			ul.s-menu{
+				list-style: none;
+				display:none;
+				opacity: 1;
+				position:absolute;
+				top:-2px;
+				left:210px;
+				z-index: 20000;
+				width:210px;
+			}
+			div.nav a{
+			    color:#fff;
+			  	font-family:Microsoft Yahei;
+				font-size:18px;
+				font-weight:bold;
+				text-decoration:none;
+				letter-spacing:1px;
+				display:block;
+				padding:2px 14px;
+				transition:color .3 ease;  
+			}
+            div.nav a:hover{
+			    opacity:.8;
+			}
+			/**search**/
+			 .container {
+			position: absolute;
+			margin: auto;
+			top: 45px;
+			right: 0px;
+			width: 35px;
+			height:35px;
+			}
+			.container .search {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 25px;
+			height: 25px;
+			background: white;
+			border-radius: 50%;
+			transition: all 1s;
+			z-index: 4;
+			}
+			.container .search:hover {
+			cursor: pointer;
+			}
+			/*放大镜*/
+			.container .search::before {
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: 13px;
+			right: 0;
+			bottom: 0;
+			left: 13px;
+			width: 5px;
+			height: 2px;
+			background: gray;
+			transform: rotate(45deg);
+			transition: all .5s;
+			}
+			.container .search::after {
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: -1px;
+			right: 0;
+			bottom: 0;
+			left: -1px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 2px solid gray;
+			transition: all .5s;
+			}
+			.container input {
+			font-family: 'Inconsolata', monospace;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			right: 0;
+		    bottom: 0; 
+			width: 30px;
+			height: 30px;
+			outline: none;
+			border: none;
+			background: white;
+			color: gray;
+			border-radius: 30px;
+			transition: all 1s;
+			opacity: 0;
+			z-index: 5;
+			font-weight: bolder;
+			letter-spacing: 0.1em;
+			}
+			.container input:hover {
+			cursor: pointer;
+			}
+			.container input:focus {
+			width: 200px;
+			opacity: 1;
+			cursor: text;
+			}
+			.container input:focus ~ .search {
+			right: -5px;
+			background: gray;
+			z-index: 6;
+			}
+			/*X按钮*/
+			.container input:focus ~ .search::before {
+			top: 0;
+			left: 0px;
+			background: white;
+			width: 25px;
+			}
+			.container input:focus ~ .search::after {
+			top: 0;
+			left: 0px;
+			width: 25px;
+			height: 2px;
+			border: none;
+			background: white;
+			border-radius: 0%;
+			transform: rotate(-45deg);
+			}
+			.container input::placeholder {
+			color: gray;
+			opacity: 0.5;
+			font-weight: bolder;
+			} 

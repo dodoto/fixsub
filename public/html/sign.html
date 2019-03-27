@@ -1,0 +1,355 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<style>
+			*{
+				box-sizing:border-box;
+				margin:0;
+				padding:0;
+			}
+		    body{
+			    font:16px/20px microsoft yahei;
+		    }
+			.wrap{
+				width:100%;
+				height:100%;
+				padding:10% 0;
+				position:fixed;
+				opacity:.8;
+				background:linear-gradient(to bottom right,#000, #000);
+			}
+			.box{
+				width:60%;
+				margin:0 auto;
+				text-align:center;
+			}
+			.box h1{
+				color:#fff;
+				font-weight:500;
+			}
+			.box input{
+				width:320px;
+				display:block;
+				height:36px;
+				border:0;
+				border-radius:4px;
+				outline:none;
+				padding:6px 10px;
+				line-height:24px;
+				margin:32px auto;
+				transition:all .5s ease-in 0.1ms;
+			}
+			.box input[type="text"], .box input[type="password"]{
+				background:#fff;
+				font-size:16px;
+				color:#50a3a2;
+			}
+			.box input[type="submit"]{
+				font-size:16px;
+				letter-spacing:2px;
+				color:#666;
+				background:#fff;
+			}
+			.box input:focus{
+				width:400px;
+			}
+			.box input[type="submit"]:hover{
+				cursor:pointer;
+				width:400px;
+			}
+			.to_login,.to_sign{
+				color:#a7c4c9;
+				text-decoration:none;
+			}
+			.text, .tip{
+				color:#e2dfe4;
+			}
+			.wrap ul{
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:-20;
+				list-style:none;
+			}
+			.wrap ul li{
+				display:block;
+				position:absolute;
+				bottom:-120px;
+				width:15px;
+				height:15px;
+				z-index:-8;
+				border-radius:50%;
+				background:rgba(255,255,255,0.15);
+				animation:square 25s infinite;
+			}
+			.wrap ul li:nth-child(1){
+				left:0;
+				animation-duration:10s;
+			}
+			.wrap ul li:nth-child(2){
+				width:40px;
+				height:40px;
+				left:10%;
+				animation-duration:15s;
+			}
+			.wrap ul li:nth-child(3){
+				left:20%;
+				width:25px;
+				height:25px;
+				animation-duration:12s;
+			}
+			.wrap ul li:nth-child(4){
+				width:50px;
+				height:50px;
+				left:30%;
+				animation-delay:3s;
+				animation-duration:12s;
+			}
+			.wrap ul li:nth-child(5){
+				width:60px;
+				height:60px;
+				left:40%;
+				animation-duration:10s;
+			}
+			.wrap ul li:nth-child(6){
+				width:75px;
+				height:75px;
+				left:50%;
+				animation-delay:7s;
+			}
+			.wrap ul li:nth-child(7){
+				width:30px;
+				height:30px;
+				left:60%;
+				animation-duration:8s;
+			}
+			.wrap ul li:nth-child(8){
+				width:90px;
+				height:90px;
+				left:70%;
+				animation-delay:4s;
+			}
+			.wrap ul li:nth-child(9){
+				width:50px;
+				height:50px;
+				left:80%;
+				animation-duration:20s;
+			}
+			.wrap ul li:nth-child(10){
+				width:75px;
+				height:75px;
+				left:90%;
+				animation-delay:6s;
+				animation-duration:30s;
+			}
+			@keyframes square{
+				0%{
+					transform:translateY(0);
+				}
+				100%{
+					bottom:400px;
+					transform:translateY(-500)
+				}
+			}
+			div.footer{
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" href="../css/head.css">
+    </head>
+    <body>
+		<div id="head">
+ 		    <div class="logo"> 
+ 			    <a href="javascript:;"> 
+ 				    <img src="../img/2016/03/logo.png"> 
+ 				</a> 
+			</div> 
+			<div class="navbody">
+				<div class="nav">
+					<ul class="menu">
+						<li><a href="#">首页</a></li>
+						<li>
+							<a href="javascript:;">FIX作品</a>
+							<ul class="m-menu">
+								<li>
+									<a href="javascript:;">FIX英美社></a>
+									<ul class="s-menu">
+										<li><a href="zuopin.html?lang=欧美剧集">欧美剧集</a></li>
+										<li><a href="zuopin.html?lang=欧美电影">欧美电影</a></li>
+										<li><a href="zuopin.html?lang=纪录片和综艺">纪录片和综艺</a></li>
+									</ul>
+								</li>
+								<li><a href="zuopin.html?lang=FIX韩语社">FIX韩语社</a></li>
+								<li><a href="zuopin.html?lang=FIX德语社">FIX德语社</a></li>
+								<li><a href="zuopin.html?lang=FIX日语社">FIX日语社</a></li>
+								<li><a href="zuopin.html?lang=FIX法语社">FIX法语社</a></li>
+							</ul>
+						</li>
+						<li><a href="https://www.baidu.com">度盘失效修复</a></li>
+						<li>
+							<a href="javascript:;">关于FIX</a>
+							<ul class="m-menu">
+								<li><a href="javascript:;">FIX起源</a></li>
+								<li><a href="javascript:;">创始人</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">加入我们</a>
+							<ul class="m-menu">
+								<li><a href="https://weibo.com">新浪微博</a></li>
+								<li><a href="sign.html?type=login">登入</a></li>
+								<li><a href="sign.html?type=sign">注册</a></li>	
+							</ul>
+						</li>	
+					</ul>
+				</div>
+				<div class="container"> 
+					<input type="text" placeholder=" Search">
+					<div class="search"></div>
+				</div> 
+			</div>
+		</div>
+	<!----------------------------------------分隔线-------------------------------------------->
+	    <div class="wrap">
+			<div class="box" id="sign">
+				<h1>注册</h1>
+				<form action="/user/reg" method="post">
+					<input type="text" placeholder="用户名" onblur="checkuname()">
+					<span class="tip">用户名由4-16个字符组成区分大小写</span>
+					<input type="text" placeholder="邮箱" onblur="checkemail()">
+					<span class="tip">目前不支持.cn结尾的邮箱</span>
+					<input type="password" placeholder="密码" onblur="checkpwd1()" onchange="checkpwd2()">
+					<span class="tip">密码不能含有非法字符，长度在4-10之间</span>
+					<input type="password" placeholder="确认密码" onblur="checkpwd2()">
+					<span class="tip">密码验证要和密码一致</span>
+					<input type="submit" value="注册">
+					<p class="change_link" align="center">
+						<span class="text">已经有账号?</span>
+						<a href="javascript:shown(login,sign)" class="to_login">直接登入</a>
+					</p>
+				</form>
+			</div>
+			<div class="box" id="login" style="display:none;">
+			    <h1>登入</h1>
+				<form action="">
+				    <input type="text" placeholder="用户名">
+					<input type="password" placeholder="密码">
+					<input type="submit" value="登入">
+					<p>
+						<span class="text"></span>
+					</p>
+					<p class="change_link" align="center">
+					    <span class="text">没有账号?</span>
+						<a href="javascript:shown(sign,login)" class="to_sign">去注册</a>
+					</p>
+					<div class="footer">
+						<img src="../img/2017/06/banner.jpg">
+					</div>
+				</form>
+			</div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<script src="../js/head.js"></script>
+		<script type="text/javascript">
+		    //注册和登入切换
+            var login=document.getElementById("login");
+			var sign=document.getElementById("sign");
+			function shown(a,b){
+			    a.style.display="block"
+				b.style.display="none"
+			}
+			var type=location.search.substring(1).split("=")[1];
+			if(type=="login"){
+				shown(login,sign)
+			}else{
+				shown(sign,login)
+			}
+			//注册
+			//用户名
+			function checkuname(){
+				var uname=document.querySelector("input[placeholder='用户名']");
+				var reg=/^[a-zA-Z][a-zA-Z0-9]{3,15}$/;
+				//ajax查看用户名是否重复
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200	){
+						var result=JSON.parse(xhr.responseText);
+						//console.log(result);
+						if(result.code==1){
+							uname.nextElementSibling.innerHTML=result.msg;
+						}	
+					}
+				}
+				xhr.open("get","/user/uname?uname="+uname.value,true);
+				xhr.send(null);
+				////////////////////////////////
+				if(!uname.value){
+					uname.nextElementSibling.innerHTML="用户名不能为空";
+				}
+				else if(reg.test(uname.value)==false){
+					uname.nextElementSibling.innerHTML="用户名不正确";
+				}
+				/*else if(result.code==1){
+				    uname.nextElementSibling.innerHTML="用户名已存在"
+			    }*/else{
+					uname.nextElementSibling.innerHTML="用户名可用";
+				}
+			}
+            //邮箱
+			function checkemail(){
+				var email=document.querySelector("input[placeholder='邮箱']");
+				var reg=/^\w+@\w+(\.[a-zA-Z]{2,3})$/;
+				if(!email.value){
+					email.nextElementSibling.innerHTML="邮箱不能为空";
+				}
+				else if(reg.test(email.value)==false){
+					email.nextElementSibling.innerHTML="邮箱不正确";
+				}else{
+					email.nextElementSibling.innerHTML="邮箱正确";
+				}
+			}
+			//密码
+			function checkpwd1(){
+				var pwd1=document.querySelector("input[placeholder='密码']");
+				var reg=/^[a-zA-Z0-9]{4,10}$/;
+				if(!pwd1.value){
+					pwd1.nextElementSibling.innerHTML="密码不能为空";
+				}
+				else if(reg.test(pwd1.value)==false){
+					pwd1.nextElementSibling.innerHTML="密码不正确";
+				}else{
+					pwd1.nextElementSibling.innerHTML="密码正确";
+				}
+			}
+			//验证密码
+			function checkpwd2(){
+				var pwd2=document.querySelector("input[placeholder='确认密码']");
+				var pwd1=document.querySelector("input[placeholder='密码']");
+				if(!pwd2.value){
+					pwd2.nextElementSibling.innerHTML="密码验证要和密码一致";
+				}
+				else if(pwd2.value!=pwd1.value){
+					pwd2.nextElementSibling.innerHTML="密码不一致";
+				}else{
+					pwd2.nextElementSibling.innerHTML="密码一致";
+				}
+			}
+			//登入
+		</script>
+	</body>
+</html>

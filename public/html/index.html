@@ -1,0 +1,243 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<style>
+		    *{
+			    margin:0;
+				padding:0;
+			}
+			/**body**/
+			.a{
+				top:0;
+	            background-image:url("../img/ieuruWP.jpg")
+			}
+			.b{
+				top:100%;
+				background-image:url("../img/YSWP6.jpg")
+			}
+			.c{
+				top:200%;
+				background-image:url("../img/GothamS5WP.jpg")
+			}
+			li{
+			    list-style:none;
+			}
+			.dot{
+			    position:fixed;
+				z-index:1000;
+				width:40px;
+				height:200px;
+				right:30px;
+				top:50%;
+			}
+			.dot ul li{
+			    width:16px;
+				height:16px;
+				border-radius:50%;
+				background:rgb(132,132,173);
+				margin:20px auto;
+				position:relative;
+				cursor:pointer;
+			}
+			.dot ul li .liBg{
+			    position:absolute;
+				border-radius:50%;
+				top:-4px;
+				left:-4px;
+				width:24px;
+				height:24px;
+				transition:all 1s;
+				z-index:200;
+				background:rgba(144,144,144,0.555);
+				display:none;
+			}
+			#box{
+			    position:fixed;
+				width:100%;
+				height:100%;
+			}
+			.a,.b,.c,.d{
+			    width:100%;
+				height:1080px;
+				position:absolute;
+				left:0;
+				transition:all 1s;
+				text-align:center;
+			}
+			#box div a{
+			    position:absolute;
+				top:80%;
+				left:50%;
+				transform:translateX(-50%);
+				padding:12px 25px;
+				font-size:13px;
+				font-weight:400;
+				font-family:Montserrat,microsoft yahei,Helvetica,Arial,sans-serif;
+                border-radius:4px;
+				color:#fff;
+				text-decoration:none;
+				transition:all .5s linear;
+			}
+			#box div a:hover{
+			    opacity:0.5;
+			}
+			#box div .btna{
+			    background:#190c2a
+			}
+			#box div .btnb{
+			    background:#580404
+			}
+			#box div .btnc{
+			    background:#000d16 
+			}
+		</style>
+		<link rel="stylesheet" href="../css/head.css">
+    </head>
+    <body>
+	    <div id="head">
+ 		    <div class="logo"> 
+ 			    <a href="javascript:;"> 
+ 				    <img src="../img/2016/03/logo.png"> 
+ 				</a> 
+			</div> 
+			<div class="navbody">
+				<div class="nav">
+					<ul class="menu">
+						<li><a href="index.html">首页</a></li>
+						<li>
+							<a href="javascript:;">FIX作品</a>
+							<ul class="m-menu">
+								<li>
+									<a href="javascript:;">FIX英美社></a>
+									<ul class="s-menu">
+										<li><a href="zuopin.html?lang=欧美剧集">欧美剧集</a></li>
+										<li><a href="zuopin.html?lang=欧美电影">欧美电影</a></li>
+										<li><a href="zuopin.html?lang=纪录片和综艺">纪录片和综艺</a></li>
+									</ul>
+								</li>
+								<li><a href="zuopin.html?lang=FIX韩语社">FIX韩语社</a></li>
+								<li><a href="zuopin.html?lang=FIX德语社">FIX德语社</a></li>
+								<li><a href="zuopin.html?lang=FIX日语社">FIX日语社</a></li>
+								<li><a href="zuopin.html?lang=FIX法语社">FIX法语社</a></li>
+							</ul>
+						</li>
+						<li><a href="https://www.baidu.com">度盘失效修复</a></li>
+						<li>
+							<a href="javascript:;">关于FIX</a>
+							<ul class="m-menu">
+								<li><a href="javascript:;">FIX起源</a></li>
+								<li><a href="javascript:;">创始人</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">加入我们</a>
+							<ul class="m-menu">
+								<li><a href="https://weibo.com">新浪微博</a></li>
+								<li><a href="sign.html?type=login">登入</a></li>
+								<li><a href="sign.html?type=sign">注册</a></li>	
+							</ul>
+						</li>	
+					</ul>
+				</div>
+				<div class="container"> 
+					<input type="text" placeholder=" Search">
+					<div class="search"></div>
+				</div> 
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------------------------------>
+	    <div class="dot">
+		    <ul>
+		    	<li>
+		    		<div class="liBg"></div>
+		    	</li>
+		    	<li>
+		    		<div class="liBg"></div>
+		    	</li>
+		    	<li>
+		    		<div class="liBg"></div>
+		    	</li>
+		    </ul>
+		</div>
+		<div id="box">
+		    <div class="a"><a href="detail.html?pid=82" class="btna">没有我卖不出去的房子</a></div>
+		    <div class="b"><a href="detail.html?pid=32" class="btnb">YOUNG SHELDON</a></div>
+		    <div class="c"><a href="detail.html?pid=2" class="btnc">FINAL SEASON</a></div>
+		</div>
+		<script src="../js/head.js"></script>
+		<script type="text/javascript">
+		/*
+		var divs=document.getElementsByTagName("div")
+		window.onmousewheel=function(){
+		    delta=event.wheelDelta;
+			console.log(delta)
+		}
+		*/
+		var box=document.getElementById("box"),
+		boxChild=box.children,
+		libg=document.getElementsByClassName("liBg")
+		libg[0].style.display="block"
+		lis=document.querySelectorAll(".dot li")
+		childLength=boxChild.length;
+		var index=0,
+		    timer,
+			Delta,
+			e,
+			flag=true;
+		var BOX_CHANGE_TIME=1000;
+		if(window.addEventListener)
+		   window.addEventListener("DOMMouseScroll",slideEvent,false);
+		   window.onmousewheel=function(event){
+		        if(flag){
+				    flag=false;
+					slideEvent(event);
+					setTimeout(function(){
+					    flag=true;
+					},BOX_CHANGE_TIME)
+				}
+		   }
+           for(var i=0;i<lis.length;i++){
+		        (function(i){
+				    lis[i].addEventListener("click",function(){
+					    index=i-1
+						slideEvent(event)
+					})
+				})(i)
+		   }
+//		   for(let i=0;i<lis.length;i++){
+//		        lis[i].addEventListener("click",function(){
+//				    var  index=i-1
+//					slideEvent(event)
+//				})
+//		   }//可以按顺序点击但是最后一张时点击其他无法切换 //可以尝试给父元素添加点击事件通过e.target绑定到子元素
+		   function slideEvent(event){
+		        clearTimeout(timer);
+				timer=setTimeout(function(){
+				    e=event || window.event;
+					if(e.wheelDelta){
+					    Delta=e.wheelDelta/120;
+					}else if(e.detail){
+					    Delta=-e.detail/2;
+					}
+					if(Delta>0){
+					    index=(index===0?0:--index);
+					}else{
+					    index=(index===childLength-1?childLength-1:++index);
+						if(index>2){
+						    index=2;
+						}
+					}
+					for(var i=0;i<childLength;i++){
+					    boxChild[i].style.top=(i-index)*100+"%";
+					}
+					for(var i=0;i<libg.length;i++){
+					    libg[i].style.display="none"
+					}
+					libg[index].style.display="block";
+				},100)
+		   }
+		</script>
+	</body>
+</html>

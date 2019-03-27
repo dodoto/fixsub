@@ -1,0 +1,405 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<style>
+		    *{
+			    margin:0;
+				padding:0;
+			}
+			/**设置head nav**/
+			div.head{
+			    background:#000;
+				padding-top:400px;
+			}
+			div.head h1{
+			    text-align:center;
+				color:#fff;
+				font:58px 雅黑;
+				margin-bottom:300px;
+			}
+			div.head h1::after{
+			    content:"";
+				display:block;
+				width:6%;
+				height:1px;
+				background-color:#fff;
+				margin:auto;
+				margin-top:6px;
+			}
+			div.head ul{
+			    list-style:none;
+				display:flex;
+				justify-content:flex-start;/*11111*/
+				margin-left:50px;
+			}
+			div.head ul li{
+			    margin:20px;
+			}
+			div.head ul li div{
+			    width:75%;
+				height:15%;
+				border-radius:5px;
+				margin:auto;
+			}
+			.yellow{
+			    background:#fdd200;
+			}
+			div.head ul li a{
+			    font-size:13px;
+			    letter-spacing:2px;
+			    color:#fff;
+				text-decoration:none;
+			}
+			/**设置body**/
+			div.body{
+			    width:1880px;
+			}
+			div.body ul li a{
+			    text-decoration:none;
+			}
+			div.body ul{/*待改*/
+			    list-style:none;
+				margin:0 auto;
+				padding:15px 40px;
+				margin-top:50px;
+			    border-spacing:34px;
+			}
+			div.body ul li a h3{
+			    font-size:15px;
+				font-weight:400;
+				color:#000;
+				text-align:center;
+			}
+			div.body ul li a h6{
+			    font-size:10px;
+				font-weight:400;
+				color:#b3b3b1;
+				text-align:center;
+			}
+			div.body ul li a h3::after{
+			    content:"";
+				display:block;
+				margin:auto;
+				margin-top:6px;
+				margin-bottom:11px;
+				width:60px;
+				height:2px;
+				background-color:#fdd200;
+			}
+			div.body ul li a img{
+			    width:400px;
+				height:600px;
+			}
+			div.body ul li{
+			    float:left;
+				margin:25px;
+				transition:all .5s linear;
+				box-shadow:-1px 1px 1px 1px #b3b3b1
+			}
+			div.body ul li:hover{
+			    transform:scale(1.1);
+			}
+			div.body ul::after{
+			    content:"";
+				display:block;
+				clear:left;
+			}
+			/**设置加载项**//**ajax**/
+			div.load{
+			    height:40px;
+				width:200px;
+				line-height:40px;
+				text-align:center;
+				margin:100px auto;
+                text-align:center;
+				border-radius:3px;
+				background-color:#000;
+			}
+			div.load a{
+			    text-decoration:none;
+				color:#fff;
+			}
+			/**设置foot**/
+			div.foot{
+			    background-color:#000;
+			    padding:30px 75px;
+				color:#fff;
+			}
+			div.foot span a{
+			    text-decoration:none;
+				color:#ffcc00;
+			}
+		</style>
+		<link rel="stylesheet" href="../css/head.css">
+    </head>
+    <body>
+	    <!--导航部-->
+		<div id="head">
+ 		    <div class="logo"> 
+ 			    <a href="javascript:;"> 
+ 				    <img src="../img/2016/03/logo.png"> 
+ 				</a> 
+			</div> 
+			<div class="navbody">
+				<div class="nav">
+					<ul class="menu">
+						<li><a href="#">首页</a></li>
+						<li>
+							<a href="javascript:;">FIX作品</a>
+							<ul class="m-menu">
+								<li>
+									<a href="javascript:;">FIX英美社&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></a>
+									<ul class="s-menu">
+										<li><a href="zuopin.html?lang=欧美剧集">欧美剧集</a></li>
+										<li><a href="zuopin.html?lang=欧美电影">欧美电影</a></li>
+										<li><a href="zuopin.html?lang=纪录片和综艺">纪录片和综艺</a></li>
+									</ul>
+								</li>
+								<li><a href="zuopin.html?lang=FIX韩语社">FIX韩语社</a></li>
+								<li><a href="zuopin.html?lang=FIX德语社">FIX德语社</a></li>
+								<li><a href="zuopin.html?lang=FIX日语社">FIX日语社</a></li>
+								<li><a href="zuopin.html?lang=FIX法语社">FIX法语社</a></li>
+							</ul>
+						</li>
+						<li><a href="https://www.baidu.com">度盘失效修复</a></li>
+						<li>
+							<a href="javascript:;">关于FIX</a>
+							<ul class="m-menu">
+								<li><a href="javascript:;">FIX起源</a></li>
+								<li><a href="javascript:;">创始人</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">加入我们</a>
+							<ul class="m-menu">
+								<li><a href="https://weibo.com">新浪微博</a></li>
+								<li><a href="sign.html?type=login">登入</a></li>
+								<li><a href="sign.html?type=sign">注册</a></li>	
+							</ul>
+						</li>	
+					</ul>
+				</div>
+				<div class="container"> 
+					<input type="text" placeholder=" Search">
+					<div class="search"></div>
+				</div> 
+			</div>
+		</div>
+		<!--头部-->
+		<div class="head">
+		    <h1>FIX作品</h1>
+            <ul>
+            	<li>
+				    <a href="javascript:;" >ALL</a>
+					<div class="yellow"></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">FIX德语社</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">欧美剧集</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">欧美电影</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">纪录片和综艺</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">FIX日语社</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">FIX韩语社</a>
+					<div></div>
+				</li>
+            	<li>
+				    <a href="javascript:;">FIX法语社</a>
+					<div></div>
+				</li>
+            </ul>	
+		</div>
+        <!-- 	主体	 -->
+		<div class="body">
+		    <ul id="box">
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/10/LV588.jpg"> -->
+<!-- 					<h3>LEGAL V</h3> -->
+<!-- 					<h6>FIX 日语社</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/09/God2588.jpg"> -->
+<!-- 					<h3>与神同行</h3> -->
+<!-- 					<h6>FIX 韩语社</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/06/SA588.jpg"> -->
+<!-- 					<h3>神秘天使</h3> -->
+<!-- 					<h6>欧美剧集</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/07/TBOEM588.jpg"> -->
+<!-- 					<h3>三块广告牌</h3> -->
+<!-- 					<h6>欧美电影</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/01/counterpart588.jpg"> -->
+<!-- 					<h3>相对宇宙</h3> -->
+<!-- 					<h6>欧美剧集</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/09/TP588.jpg"> -->
+<!-- 					<h3>人类清除计划</h3> -->
+<!-- 					<h6>欧美剧集</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/04/Gonjiam588.jpg"> -->
+<!-- 					<h3>昆池岩</h3> -->
+<!-- 					<h6>FIX 韩语社</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2018/08/Post588.jpg"> -->
+<!-- 					<h3>华盛顿邮报</h3> -->
+<!-- 					<h6>欧美电影</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 					<img src="../img/2018/04/OL588.jpg"> -->
+<!-- 					<h3>大叔的爱</h3> -->
+<!-- 					<h6>FIX 日语社</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2015/02/20.jpg"> -->
+<!-- 					<h3>幸存者</h3> -->
+<!-- 					<h6>欧美电影</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2015/02/GothamS4.jpg"> -->
+<!-- 					<h3>哥谭</h3> -->
+<!-- 					<h6>欧美剧集</h6> -->
+<!-- 				</a></li> -->
+<!-- 		    	<li><a href=""> -->
+<!-- 				    <img src="../img/2015/02/GreyS15.jpg"> -->
+<!-- 					<h3>实习医生格蕾</h3> -->
+<!-- 					<h6>欧美剧集</h6> -->
+<!-- 				</a></li> -->
+		    </ul>
+		</div>
+		<!--加载更多-->
+		<div class="load" data-target="">
+		    <a href="javascript:;" onclick="getMore()">点击加载更多</a>
+		</div>
+        <!--尾部-->
+		<div class="foot">
+		    <span class="copyrights">
+                ©copyright 
+				<a href="../index.htm" tppabs="http://www.zimuxia.cn/" title="FIX字幕侠">FIX字幕侠</a>
+				2015-2017 蜀ICP备17039209号
+			</span>
+		</div>
+		<script src="../js/head.js"></script>
+		<script type="text/javascript">
+		    //切换导航标签
+			var headh1=document.querySelector("div.head h1");
+			var tags=document.querySelectorAll("div.head ul li a");
+			var ul=document.getElementById("box")
+			var loadMore=document.getElementsByClassName("load")[0];
+			var pno = 0;
+			///
+			var lang=decodeURIComponent(location.search.substring(1).split("=")[1]);//转换乱码为中文
+			//console.log(lang)
+			if(lang==undefined){
+				headh1.innerHTML="FIX作品"
+				loadMore.dataset.target="ALL"
+			}else{
+				headh1.innerHTML=lang;
+				loadMore.dataset.target=lang;
+			}
+			//console.log(loadMore.dataset.target)
+			var yellow=document.getElementsByClassName("yellow")[0];
+			if(yellow!=undefined){
+				yellow.className="";
+			}
+			for(var tag of tags){
+				if(tag.innerHTML==headh1.innerHTML){
+					tag.nextElementSibling.className="yellow"
+				}
+			}
+            ///
+			for(var tag of tags){
+			    tag.onclick=function(){
+					ul.innerHTML="";
+				    var tag=this;
+					headh1.innerHTML=tag.innerHTML;
+					loadMore.dataset.target=tag.innerHTML;
+					pno=1;
+					if(tag.innerHTML=="ALL"){ 
+					    headh1.innerHTML="FIX作品"
+					}
+					var yellow=document.getElementsByClassName("yellow")[0];
+					if(yellow!=undefined){
+					    yellow.className="";
+					}
+					tag.nextElementSibling.className="yellow"
+				}
+				//ajax2
+				tag.addEventListener("click",function(){
+				    var xhr=new XMLHttpRequest();
+					xhr.onreadystatechange=function(){
+					    if(xhr.readyState==4 && xhr.status==200){
+						    var result=JSON.parse(xhr.responseText)
+							add(result);
+							console.log(result);
+							if(result.length<12){
+								loadMore.style.visibility="hidden"
+							}else{
+								loadMore.style.visibility="visible"
+							}
+						}
+					}
+					var str=this.innerHTML 
+					str=str.replace(/^\"|\"$/g,"");//删除双引号.replace("\\s+","");
+					//console.log(str);
+					xhr.open("get",`/product/poster?pno=1&lang=${str}`,true)
+					xhr.send(null)
+				})
+			}
+			//ajax
+			getMore=function(){
+			    var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+				    if(xhr.readyState==4 && xhr.status==200){
+					    var result=JSON.parse(xhr.responseText)
+						add(result);
+						if(result.length<12){
+						    loadMore.style.visibility="hidden"
+						}
+					}
+				}
+				pno++;
+	            xhr.open("get","/product/poster?pno="+pno+"&lang="+loadMore.dataset.target,true)//
+				xhr.send(null);
+			}
+			getMore();
+			//拼接函数
+			function add(data){
+				var html = '';
+				for(var key of data){
+					html += `<li>
+								<a href="detail.html?pid=${key.pid}">
+									<img src="${key.img_url}">
+									<h3>${key.title}</h3>
+									<h6>${key.lang}</h6>
+								</a>
+							</li>`
+				}
+				ul.innerHTML += html;
+			}
+		</script>
+	</body>
+</html>
