@@ -9,7 +9,7 @@ var router=express.Router();
 //1.用户注册
 router.post("/reg",(req,res)=>{
     var obj=req.body;
-	console.log(obj)
+	//console.log(obj)
 	var $uname=obj.uname;
 	if(!$uname){
 	    res.send("账号空了")
@@ -56,6 +56,20 @@ router.get("/uname",(req,res)=>{
 	    if(err)throw err;
 		if(result.length>0){
 		    res.send({code:1,msg:"用户名已经存在"});
+		}
+	})
+})
+//登入
+router.post("/login",(req,res)=>{
+    //参数
+	var obj = req.body;
+	var uname = obj.uname
+	var pwd = obj.pwd
+	var sql = 'select * from zimuxia_user where uname = ? and pwd = ?'
+	pool.query(sql,[uname,pwd],(err,result)=>{
+	    if(err)throw err;
+		if(result.length>0){
+		    res.send("<script>alert('登入成功');location.href='http://127.0.0.1/index.html'</script>")
 		}
 	})
 })
